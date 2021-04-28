@@ -1,74 +1,35 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <style>
-        #div1 {
 
-            width: 768px;
-            height: 500px;
-            margin-left: 400px;
-            border: 1px solid #000000;
-        }
-        #div2 {
-            align-items: center;
-            width: 1500px;
-            height: 200px;
-            margin-left: 10px;
+        <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Gamification</title>
 
-            border: 1px solid #aaaaaa;
-        }
-    </style>
-    <script>
-        var count = 0
-        function allowDrop(ev) {
-            ev.preventDefault();
-        }
 
-        function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-        }
-
-        function drop(ev) {
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-            count = count+1
-            document.getElementById("count").innerHTML = count
-        }
-
-        function drop2(ev) {
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-            count = count -1
-            document.getElementById("count").innerHTML = count
-        }
-    </script>
 </head>
+<script type="text/javascript" src="script.js">
+
+</script>
 <body>
 
-
-
 <H1 style="text-align: center">The delivery truck container</H1>
-
 <h2 style="text-align: center">Loaded parcels</h2> <h1 style="text-align: center" id="count"> </h1>
 <p style="text-align: center">Front</p>
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
 <p style="text-align: center">Back</p>
 <H3 > The Boxes to be delivered Red box indicate early delivery </H3>
-
 <div id="div2" ondrop="drop2(event)" ondragover="allowDrop(event)" >
-    <img id="drag1" src="unnamed.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
-    <img id="drag2" src="unnamed.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
-    <img id="drag6" src="red.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
-    <img id="drag3" src="unnamed.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
-    <img id="drag7" src="red.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
-    <img id="drag8" src="red.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
-    <img id="drag4" src="unnamed.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa" >
+    <img id="drag1" src="brown_box.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
+    <img id="drag2" src="brown_box.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
+    <img id="drag6" src="red_box.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
+    <img id="drag3" src="brown_box.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
+    <img id="drag7" src="red_box.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
+    <img id="drag8" src="red_box.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
+    <img id="drag4" src="brown_box.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa" >
 
-    <img id="drag9" src="red.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa" >
-    <img id="drag10" src="red.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
-    <img id="drag5" src="unnamed.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
+    <img id="drag9" src="red_box.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa" >
+    <img id="drag10" src="red_box.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
+    <img id="drag5" src="brown_box.png" draggable="true" ondragstart="drag(event)" width="250" height="100" border="1px solid #aaaaaa">
 </div>
 </body>
 </html>
